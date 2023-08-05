@@ -1,0 +1,3 @@
+git rm --cached .env
+git rm --cached flask_session
+git rm --cached venv

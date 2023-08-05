@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/desktop.css')}}"/>
+
+    <title>Murilo Ryan Pokedex</title>
+</head>
+<body>
+    <header class="topsize-header">
+        <h2>Wellcome to Pokedex!</h2>
+        
+        <form action="/api/pokemon/?" class="search-form">
+            <input type="text" name="query">
+            <button type="submit">search</button>
+        </form>
+    </header>
+    
+    <div class="container">
+        <main class="main">
+            <header class="pokemon-name"><h4>{{pokemon['name']}}</h4></header>
+
+            <div style="display: flex;">
+                <img src="{{pokemon['artwork']}}" class="pokemon-img">
+
+                <div class="pokemon-data">
+                    <h5 style="text-align: center;">dc {{pokemon}}</h5>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
